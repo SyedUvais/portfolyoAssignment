@@ -19,7 +19,7 @@ const ResumeSection = () => {
                   if (!curItem?.forEducation)
                   {
                     return (
-                      <div className="resume-item content-box active">
+                      <div key={index} className="resume-item content-box active">
                         <div className="date" style={{display: 'flex', justifyContent: 'space-between'}}>
                         <p>{curItem?.startDate.split('-')[0]} - {curItem?.endDate.split('-')[0] === '2024' ? 'Present' :  curItem?.endDate.split('-')[0]} </p>
                         <p>{curItem.jobLocation}</p>
@@ -64,7 +64,7 @@ const ResumeSection = () => {
                   if (curItem?.forEducation)
                   {
                     return (
-                      <div className="resume-item content-box active">
+                      <div key={index} className="resume-item content-box active">
                       <div className="date" style={{display: 'flex', justifyContent: 'space-between'}}>
                         <p>{curItem?.startDate.split('-')[0]} - {curItem?.endDate.split('-')[0] === '2024' ? 'Present' :  curItem?.endDate.split('-')[0]} </p>
                         <p>{curItem.jobLocation}</p>

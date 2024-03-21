@@ -160,7 +160,7 @@ const IndexOnePage = () => {
                 if (curItem.enabled)
                 {
                     return (
-                      <div className="service-col">
+                      <div key={index} className="service-col">
                     <div className="service-item content-box">
                       <div className="icon">
                         <img src={curItem.image.url} height={80} width={80} style={{borderRadius: 10}} alt="" />
@@ -243,7 +243,7 @@ const IndexOnePage = () => {
         </div>
         {/* Section Pricing */}
         {userInfo?.pricing && (<div className="section pricing" id="section-pricing">
-          <div className="content">
+          <div key={Math.random()} className="content">
             {/* title */}
             <div className="title">
               <div className="title_inner">Pricing Table</div>
@@ -331,7 +331,7 @@ const IndexOnePage = () => {
                   if (!curItem?.forEducation)
                   {
                     return (
-                      <div className="resume-item content-box active">
+                      <div key={index} className="resume-item content-box active">
                         <div className="date" style={{display: 'flex', justifyContent: 'space-between'}}>
                         <p>{curItem?.startDate.split('-')[0]} - {curItem?.endDate.split('-')[0] === '2024' ? 'Present' :  curItem?.endDate.split('-')[0]} </p>
                         <p>{curItem.jobLocation}</p>
@@ -376,7 +376,7 @@ const IndexOnePage = () => {
                   if (curItem?.forEducation)
                   {
                     return (
-                      <div className="resume-item content-box active">
+                      <div key={index} className="resume-item content-box active">
                       <div className="date" style={{display: 'flex', justifyContent: 'space-between'}}>
                         <p>{curItem?.startDate.split('-')[0]} - {curItem?.endDate.split('-')[0] === '2024' ? 'Present' :  curItem?.endDate.split('-')[0]} </p>
                         <p>{curItem.jobLocation}</p>
@@ -424,7 +424,7 @@ const IndexOnePage = () => {
                 if(curItem?.enabled)
                 {
                   return (
-                    <li>
+                    <li key={index}>
                     <div className="name">{curItem?.name}</div>
                     <div className="progress ">
                       <div className="percentage" style={{ width: `${curItem?.percentage}%` }}>
@@ -525,7 +525,7 @@ const IndexOnePage = () => {
                 if (curItem.enabled)
                 {
                   return(
-                    <li>
+                    <li key={index}>
                       <div className="name">{curItem?.name}</div>
                     </li>
                   )
@@ -708,7 +708,7 @@ const IndexOnePage = () => {
               {userInfo?.timeline?.map((curItem, index, array) => {
 
                     return (
-                      <div className="" style={{}}>
+                      <div key={index} className="" style={{}}>
                         <div className="">
                           <a target="_blank" rel="noreferrer" href="#">
                             <h1 style={{color:'white', fontSize: '18px'}}>{curItem.company_name}</h1>

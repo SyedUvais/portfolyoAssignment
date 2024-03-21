@@ -155,7 +155,7 @@ const ItemIsotope = () => {
       <div className="box-items portfolio-items">
       {userInfo?.projects?.map((curItem, index, array) => {
         return (
-          <div className="box-item f-gallery f-links f-video f-image f-music f-content">
+          <div key={index} className="box-item f-gallery f-links f-video f-image f-music f-content">
             {" "}
             {/* add class "animate-to-page" if need animated transition to page and delete target="_blank" rel="noreferrer" */}
             <div className="image">

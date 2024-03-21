@@ -17,7 +17,7 @@ const Footer = () => {
             if (curItem.enabled)
             {
               return (
-                <a target="_blank" rel="noreferrer" href={`https://www.${curItem.platform}.com/`}>
+                <a key={index} target="_blank" rel="noreferrer" href={`https://www.${curItem.platform}.com/`}>
                   <span className={`icon fab fa-${curItem.platform.toLowerCase()}`} />
                 </a>
               )

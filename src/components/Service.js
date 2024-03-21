@@ -17,7 +17,7 @@ const Service = () => {
                 if (curItem.enabled)
                 {
                     return (
-                      <div className="service-col">
+                      <div key={index} className="service-col">
                     <div className="service-item content-box">
                       <div className="icon">
                         <img src={curItem.image.url} height={80} width={80} style={{borderRadius: 10}} alt="" />

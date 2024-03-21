@@ -16,7 +16,7 @@ const Clients = () => {
               {userInfo?.timeline?.map((curItem, index, array) => {
 
                     return (
-                      <div className="" style={{}}>
+                      <div key={index} className="" style={{}}>
                         <div className="">
                           <a target="_blank" rel="noreferrer" href="#">
                             <h1 style={{color:'white', fontSize: '18px'}}>{curItem.company_name}</h1>

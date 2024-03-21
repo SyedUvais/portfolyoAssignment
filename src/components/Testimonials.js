@@ -49,7 +49,7 @@ const Testimonials = () => {
               if (curItem.enabled)
               {
                 return (
-                  <SwiperSlide className="swiper-slide">
+                  <SwiperSlide key={index} className="swiper-slide">
                     <div className="reviews-item content-box">
                       <div className="image">
                         <img src={curItem?.image?.url} alt="" />

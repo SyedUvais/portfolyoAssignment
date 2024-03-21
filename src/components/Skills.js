@@ -19,7 +19,7 @@ export const DesignSkills = () => {
                 if(curItem?.enabled)
                 {
                   return (
-                    <li>
+                    <li key={index}>
                     <div className="name">{curItem?.name}</div>
                     <div className="progress ">
                       <div className="percentage" style={{ width: `${curItem?.percentage}%` }}>
@@ -133,7 +133,7 @@ export const CodingSkills = () => {
                 if(curItem?.enabled)
                 {
                   return (
-                    <li>
+                    <li key={index}>
                       <div className="name">{curItem.name}</div>
                       <div className={`progress p${curItem.percentage}`}>
                         {" "}
@@ -219,7 +219,7 @@ export const KnowledgeSkills = () => {
                 if (curItem.enabled)
                 {
                   return(
-                    <li>
+                    <li key={index}>
                       <div className="name">{curItem?.name}</div>
                     </li>
                   )
